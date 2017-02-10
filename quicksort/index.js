@@ -10,12 +10,12 @@ module.exports = function quickSort(array, sortFunc) {
   }
 
   sortFunc = typeof sortFunc === 'function' ? sortFunc : defaultSort;
-  var pivotIndex = Math.floor(array.length / 2) ;
-  var pivot = array.splice(pivotIndex, 1)[0];
+
+  var pivot = array[0];
   var leftArr = [];
   var rightArr = [];
 
-  for (var i = 0; i < array.length; ++i) {
+  for (var i = 1; i < array.length; ++i) {
     if (sortFunc(array[i], pivot)) {
       leftArr.push(array[i]);
     } else {
