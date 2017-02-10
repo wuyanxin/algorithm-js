@@ -1,5 +1,5 @@
 
-var quickSort = require('../quicksort');
+var quickSort = require('../quickSort');
 
 describe('QuickSort', function() {
   describe('#origin should not change', function () {
